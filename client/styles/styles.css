@@ -1,0 +1,314 @@
+/* body {
+  background: #eee;
+  text-align: center;
+  padding: 0 25px;
+  font-family: arial, sans-serif;
+}
+
+#main,
+#chats {
+  width: 500px;
+  margin: auto;
+  text-align: left;
+  background: white;
+  padding: 50px 60px;
+  border: solid #ddd;
+  border-width: 0 1px 1px 1px;
+}
+
+#main h1 {
+  margin-top: 0;
+  font-size: 35px;
+  margin-bottom: 5px;
+  padding: 5px;
+}
+
+#main h1 span {
+  font-style: italic;
+}
+
+#main ul {
+  padding-left: 20px;
+}
+
+#main .error {
+  border: 1px solid red;
+  background: #fdeff0;
+  padding: 20px;
+}
+
+#main .success {
+  margin-top: 25px;
+}
+
+#main .success code {
+  font-size: 12px;
+  color: green;
+  line-height: 13px;
+}
+
+form {
+  padding: 20px;
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+form input[type="text"] {
+  margin-right: 10px;
+  width: 70%;
+  font-size: 12px;
+  padding: 5px;
+}
+
+form textarea {
+    width: 90%;
+    height: 100px;
+    margin: 5px 0;
+    font-size: 120%;
+    padding: 10px;
+}
+
+form button {
+    font-size: 120%;
+    height: 30px;
+    width: 100px;
+}
+
+form textarea {
+    width: 90%;
+    height: 100px;
+    margin: 5px 0;
+    font-size: 120%;
+    padding: 10px;
+}
+
+form button {
+    font-size: 120%;
+    height: 30px;
+    width: 100px;
+}
+
+.chat {
+  padding: 5px;
+  margin-bottom: 5px;
+  background-color: #eee;
+}
+
+.chat .username {
+  font-weight: 800;
+}
+
+.chat:hover {
+  background-color: #ddd;
+}
+
+.spinner {
+  float: right;
+  height: 46px;
+  margin-bottom: 5px;
+}
+
+.spinner img {
+  padding: 10px;
+}
+
+.friend {
+  color: #fff;
+  background-color: #0090da;
+} */
+
+body {
+  background: #eee;
+  text-align: center;
+  padding: 0 25px;
+  font-family: arial, sans-serif;
+}
+
+#main {
+  display: inline;
+  /* display: none; */
+}
+
+#chats {
+  display: flex;
+  flex-direction: column;
+  width: 450px;
+  margin: auto;
+  text-align: left;
+  background: white;
+  padding: 50px 60px;
+  border: solid #ddd;
+  border-width: 0 1px 1px 1px;
+}
+
+.textDiv {
+  padding: 10px;
+}
+
+.inputRoom {
+  width: 350px;
+  height: 150px;
+  margin: auto;
+  text-align: center;
+  vertical-align: middle;
+  margin-top: 100px;
+  background-color: white;
+  /* display: flex; */
+  flex-direction: column;
+  display: none;
+  animation: fadein 3s;
+  -moz-animation: fadein 3s; /* Firefox */
+  -webkit-animation: fadein 3s; /* Safari and Chrome */
+  -o-animation: fadein 3s;
+}
+
+@keyframes fadein {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+@-moz-keyframes fadein { /* Firefox */
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+@-o-keyframes fadein { /* Opera */
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+#roomspan {
+  height: 50px;
+  display: inline;
+}
+
+#main h1 {
+  margin-top: 0;
+  font-size: 35px;
+  margin-bottom: 5px;
+  padding: 5px;
+}
+
+#main h1 span {
+  font-style: italic;
+}
+
+#main ul {
+  padding-left: 20px;
+}
+
+#main .error {
+  border: 1px solid red;
+  background: #fdeff0;
+  padding: 20px;
+}
+
+#main .success {
+  margin-top: 25px;
+}
+
+#main .success code {
+  font-size: 12px;
+  color: green;
+  line-height: 13px;
+}
+
+form {
+  width: 450px;
+  padding: 20px;
+  /* padding-left: auto; */
+  margin-inline: auto;
+  margin-bottom: 20px;
+}
+
+form input[type="text"] {
+  margin-right: 10px;
+  width: 70%;
+  font-size: 12px;
+  padding: 5px;
+}
+
+form textarea {
+    width: 90%;
+    height: 100px;
+    margin: 5px 0;
+    font-size: 120%;
+    padding: 10px;
+}
+
+form button {
+  font-size: 120%;
+  height: 30px;
+  width: 100px;
+  display: flex;
+  text-align: center;
+  margin: auto;
+}
+
+form textarea {
+    width: 450px;
+    height: 100px;
+    margin: 5px 0;
+    font-size: 120%;
+    padding: 10px;
+}
+
+form button {
+    font-size: 120%;
+    height: 30px;
+    width: 100px;
+    display:inline;
+    text-align: center;
+    margin: auto;
+}
+
+.chat {
+  padding: 5px;
+  margin-bottom: 5px;
+  background-color: #eee;
+}
+
+.chat .username {
+  font-weight: 800;
+}
+
+.chat:hover {
+  background-color: #ddd;
+}
+
+.spinner {
+  float: right;
+  height: 46px;
+  margin-bottom: 5px;
+}
+
+.spinner img {
+  padding: 10px;
+}
+
+.friend {
+  color: #fff;
+  background-color: #0090da;
+}
+
+#addroom {
+  color: #898989;
+}
